@@ -1,18 +1,29 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
 
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./store/CartProvider";
 
 function App() {
+  const [modalState, setModalState] = useState(false);
+
+  const showCartHandler = (props) => {
+    setModalState(true);
+  };
+
+  const hideCartHandler = (props) => {
+    setModalState(false);
+  };
+
   return (
-    <Fragment>
-      <Header />
-      <Cart />
+    <CartProvider>
+      {modalState && <Cart onClose={hideCartHandler} />}
+      <Header onShowCartHandler={showCartHandler} />
       <main>
         <Meals />
       </main>
-    </Fragment>
+    </CartProvider>
   );
 }
 
