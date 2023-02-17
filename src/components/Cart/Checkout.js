@@ -26,6 +26,7 @@ const Checkout = (props) => {
       </div>
       <div className={classes.actions}>
         <button type="button" onClick={props.onCancel}>
+          {/* the "type=button" insures it does not submit the form */}
           Cancel
         </button>
         <button className={classes.submit}>Confirm</button>
