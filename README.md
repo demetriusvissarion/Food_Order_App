@@ -1,4 +1,4 @@
 # Food_Order_App
-Practice React context
+Practice React states
 
 https://minerstavern.netlify.app/
