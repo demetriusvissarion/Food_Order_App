@@ -19,18 +19,20 @@
   font-weight: 600;
 }
 
+.loading_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .loading {
   background-color: white;
-  text-align: center;
-  color: #5a1a01;
-  font-size: 4rem;
+  color: blue;
+  font-size: 5rem;
   font-weight: 600;
 }
 
 .loader {
-  position: absolute;
-  left: 60%;
-  top: 52%;
   z-index: 1;
   border: 25px solid #becc2c; /* Light grey */
   border-top: 25px solid rgb(12, 175, 34); /* Blue */

@@ -36,12 +36,14 @@ const AvailableMeals = () => {
             price: data[key].price,
           });
         }
+
         // delay test = Start
         function timeout(delay) {
           return new Promise((res) => setTimeout(res, delay));
         }
-        await timeout(5000); //for 1 sec delay
+        await timeout(1000); // 1000 = 1 sec delay
         // delay test = End
+
         setMeals(loadedMeals);
         setIsLoading(false);
       } catch (error) {
@@ -72,10 +74,10 @@ const AvailableMeals = () => {
   let mealsList = [];
 
   if (isLoading) {
-    return (
+    content = (
       <section>
         <p className={classes.loading}>Loading...</p>;
-        <p className={classes.loader}>...</p>;
+        <p className={classes.loader}>.</p>;
       </section>
     );
   }
@@ -100,6 +102,14 @@ const AvailableMeals = () => {
 
   return (
     <section className={classes.meals}>
+      {isLoading && (
+        <section>
+          <div className={classes.loading_container}>
+            <p className={classes.loading}>Loading...</p>;
+            <p className={classes.loader}>.</p>;
+          </div>
+        </section>
+      )}
       <Card>
         <ul>{mealsList}</ul>
       </Card>
