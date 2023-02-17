@@ -75,6 +75,7 @@ const AvailableMeals = () => {
       <Card>
         <ul>{mealsList}</ul>
       </Card>
+      {error && <section className={classes.error}>{content}</section>}
     </section>
   );
 };
