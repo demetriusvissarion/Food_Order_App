@@ -19,6 +19,36 @@
   font-weight: 600;
 }
 
+.loading {
+  background-color: white;
+  text-align: center;
+  color: #5a1a01;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.loader {
+  position: absolute;
+  left: 60%;
+  top: 52%;
+  z-index: 1;
+  border: 25px solid #becc2c; /* Light grey */
+  border-top: 25px solid rgb(12, 175, 34); /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes meals-appear {
   from {
     opacity: 0;
