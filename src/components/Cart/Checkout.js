@@ -47,6 +47,13 @@ const Checkout = (props) => {
     if (!formIsValid) {
       return;
     }
+
+    props.onSubmit({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postalCode: enteredPostalCode,
+    });
   };
 
   // Invalid CSS classes

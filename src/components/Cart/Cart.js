@@ -20,6 +20,19 @@ const Cart = (props) => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
 
+  const submitOrderhandler = (userData) => {
+    fetch(
+      "https://food-order-app-4f64b-default-rtdb.europe-west1.firebasedatabase.app/orders.json",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          user: userData,
+          orederedItems: cartCtx.items,
+        }),
+      }
+    );
+  };
+
   const cartItems = (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
@@ -51,7 +64,9 @@ const Cart = (props) => {
         <span>{totalAmount}</span>
       </div>
 
-      {showCheckoutForm && <Checkout onCancel={props.onClose} />}
+      {showCheckoutForm && (
+        <Checkout onSubmit={submitOrderhandler} onCancel={props.onClose} />
+      )}
 
       {showActions && (
         <div className={classes.actions}>
