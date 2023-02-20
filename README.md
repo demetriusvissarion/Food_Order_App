@@ -1,6 +1,7 @@
 # Miner's Tavern - A Food Order App
 Practice React states
 
+## Check out the deployed website here:
 https://minerstavern.netlify.app/
 
 ## Welcome! 👋
