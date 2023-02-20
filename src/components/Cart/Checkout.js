@@ -48,6 +48,7 @@ const Checkout = (props) => {
       return;
     }
 
+    // Max named it "onConfirm". Connects to Cart.js[onSubmit]
     props.onSubmit({
       name: enteredName,
       street: enteredStreet,
