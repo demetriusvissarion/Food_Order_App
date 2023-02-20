@@ -23,6 +23,7 @@ const Cart = (props) => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
 
+  // Submitting orders to firebase database
   const submitOrderhandler = async (userData) => {
     setIsSubmitting(true);
     await fetch(

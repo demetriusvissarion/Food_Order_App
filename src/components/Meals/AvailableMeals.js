@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem/MealItem";
+//// back-up dummy data for testing:
 // import Data from "./dummy-data";
 
 const AvailableMeals = () => {
@@ -20,6 +21,7 @@ const AvailableMeals = () => {
         "https://food-order-app-4f64b-default-rtdb.europe-west1.firebasedatabase.app/meals.json"
       );
 
+      // Error handling
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
@@ -41,12 +43,12 @@ const AvailableMeals = () => {
         });
       }
 
-      // delay test = Start
+      //// Delay test (to see loading animation) = Start
       function timeout(delay) {
         return new Promise((res) => setTimeout(res, delay));
       }
-      await timeout(1000); // 1000 = 1 sec delay
-      // delay test = End
+      await timeout(2000); // 1000 = 1 sec delay
+      //// Delay test = End
 
       setMeals(loadedMeals);
       setIsLoading(false);
@@ -56,22 +58,6 @@ const AvailableMeals = () => {
       setError(error.message);
     });
   }, []);
-
-  // Send order to firebase
-  // async function sendOrderHandler(order) {
-  //   const response = await fetch(
-  //     "https://food-order-app-4f64b-default-rtdb.europe-west1.firebasedatabase.app/orders.json",
-  //     {
-  //       method: "POST",
-  //       body: JSON.stringify(order),
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     }
-  //   );
-  //   const data = await response.json();
-  //   console.log(data);
-  // }
 
   // Error handling
   let content = <p>Found no meals</p>;
@@ -101,8 +87,6 @@ const AvailableMeals = () => {
       />
     ));
   }
-
-  // console.log(mealsList);
 
   return (
     <section className={classes.meals}>
