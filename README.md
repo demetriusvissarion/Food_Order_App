@@ -19,6 +19,6 @@ After the installation,
 Feel free to open a pull request on this repository is there's any feature you'd like to add to this app!
 
 ## Have A Feedback? 
-Giving feedback is appreciated, if you any to give on this project please email beatriceebirim@gmail.com.
+Giving feedback is appreciated, if you any to give on this project please email demetrius.vissarion@gmail.com
 
 **Happy Coding 💪**
