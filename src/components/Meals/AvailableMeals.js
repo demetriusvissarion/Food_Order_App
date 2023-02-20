@@ -63,11 +63,12 @@ const AvailableMeals = () => {
   let content = <p>Found no meals</p>;
   let mealsList = [];
 
+  // Loading text and animation in CSS
   if (isLoading) {
     content = (
       <section>
-        <p className={classes.loading}>Loading...</p>;
-        <p className={classes.loader}>.</p>;
+        <p className={classes.loading}>Loading...</p>
+        <p className={classes.loader}> </p>
       </section>
     );
   }
@@ -93,8 +94,8 @@ const AvailableMeals = () => {
       {isLoading && (
         <section>
           <div className={classes.loading_container}>
-            <p className={classes.loading}>Loading...</p>;
-            <p className={classes.loader}>.</p>;
+            <p className={classes.loading}>Loading...</p>
+            <p className={classes.loader}> </p>
           </div>
         </section>
       )}
