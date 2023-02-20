@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem/MealItem";
-import Data from "./dummy-data";
+// import Data from "./dummy-data";
 
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
@@ -15,19 +15,19 @@ const AvailableMeals = () => {
       setIsLoading(true);
       setError(null);
 
-      // Fetch existing meals from firebase
-      // const response = await fetch(
-      //   "https://food-order-app-4f64b-default-rtdb.europe-west1.firebasedatabase.app/meals.json"
-      // );
+      //// Fetch existing meals from firebase
+      const response = await fetch(
+        "https://food-order-app-4f64b-default-rtdb.europe-west1.firebasedatabase.app/meals.json"
+      );
 
-      // if (!response.ok) {
-      //   throw new Error("Something went wrong!");
-      // }
-      //
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
 
-      // const data = await response.json();
+      const data = await response.json();
 
-      const data = Data;
+      //// back-up dummy data for testing:
+      // const data = Data;
 
       const loadedMeals = [];
 
