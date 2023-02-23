@@ -1,8 +1,4 @@
 # Miner's Tavern - A Food Order App
-Practice React states
-
-## Check out the deployed website here:
-https://minerstavern.netlify.app/
 
 ## Welcome! 👋
 This is a React.js project. It uses firebase as its backend to fetch and send data to the server.
@@ -15,6 +11,9 @@ Then, open the project folder in your editor and on the integrated terminal:
 After the installation,
 - Run `npm start` to run the project on your browser localhost.
     That's all you'd need to do 🙂
+    
+## Check out the deployed website here:
+https://minerstavern.netlify.app/
 
 ## Want To Contribute? 
 Feel free to open a pull request on this repository is there's any feature you'd like to add to this app!
